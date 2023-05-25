@@ -10,9 +10,8 @@ export default function NavBar() {
       <li>
         <Link to="/menu">Our Menu</Link>
       </li>
-
       <li>
-        <a>Item 3</a>
+        <Link to="/order/salad">Order Food</Link>
       </li>
     </>
   );
@@ -39,7 +38,7 @@ export default function NavBar() {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-black rounded-box w-52"
             >
               {navOptions}
             </ul>
