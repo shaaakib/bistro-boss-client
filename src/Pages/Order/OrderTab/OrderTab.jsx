@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper';
 
+// Todo: implement pagination here on this page
 export default function OrderTab({ items }) {
   const pagination = {
     clickable: true,

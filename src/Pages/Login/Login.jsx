@@ -111,9 +111,11 @@ export default function Login() {
                   className="input input-bordered"
                 />
               </div>
+
+              {/* Todo: Make button disabled for captcha*/}
               <div className="form-control mt-6">
                 <input
-                  disabled={disabled}
+                  disabled={false}
                   className="btn btn-primary"
                   type="submit"
                   value="Submit"

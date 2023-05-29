@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProviders';
+import { FaShoppingCart } from 'react-icons/fa';
 
 export default function NavBar() {
   const { user, logOut } = useContext(AuthContext);
@@ -11,6 +12,7 @@ export default function NavBar() {
       .then(() => {})
       .catch((error) => console.log(error));
   };
+
   const navOptions = (
     <>
       <li>
@@ -25,10 +27,17 @@ export default function NavBar() {
       <li>
         <Link to="/secret">Secret</Link>
       </li>
+      <li>
+        <Link to="/">
+          <button className="btn gap-2">
+            <FaShoppingCart />
+            <div className="badge badge-secondary">+0</div>
+          </button>
+        </Link>
+      </li>
 
       {user ? (
         <>
-          <span>{user?.displayName}</span>
           <button onClick={handleLogOut} className="btn btn-active btn-ghost">
             LogOut
           </button>
